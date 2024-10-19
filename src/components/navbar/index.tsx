@@ -16,6 +16,7 @@ const Navbar = (props: Props) => {
                     wallets={props.wallet.wallets}
                     connect={props.wallet.connect}
                     disconnect={props.wallet.disconnect}
+                    dAppclient={props.wallet.dAppclient}
                 />
             </div>
         </div>
