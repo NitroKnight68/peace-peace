@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import fetchData from "../helpers/utils";
+import QRCode from "react-qr-code";
 
 interface Props {
   wallet: walletInterfaceProps;
@@ -30,6 +31,7 @@ const Tickets = (props: Props) => {
         // }
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const filterednfts = nfts?.filter(
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           (nft: any) => userAddress === nft.holder
         );
         console.log(filterednfts);
@@ -37,7 +39,12 @@ const Tickets = (props: Props) => {
       }
     })();
   }, []);
-  return <>Tickets</>;
+  return (
+    <>
+      Tickets
+      <QRCode value="Nishith" size={300} />
+    </>
+  );
 };
 
 export default Tickets;
