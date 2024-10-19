@@ -15,4 +15,6 @@
 
 import { DAppClient } from "@airgap/beacon-sdk";
 
-export const dAppClient = new DAppClient({ name: "Beacon Docs" });
+export const dAppClientTezos = new DAppClient({ name: "Tezos" });
+// export const dAppClientEtherlink = new DAppClient({ name: "Etherlink" });
+
