@@ -1,6 +1,6 @@
 import { Navbar } from "../../components";
 import "./Home.css";
-import getEventData from "../../helpers/event";
+import buyTicket from "../../helpers/event";
 
 interface Props {
     wallet: walletInterfaceProps;
@@ -9,9 +9,10 @@ interface Props {
 const Home = (props: Props) => {
     console.log(props);
 
-    const buytick = ()=>{
-        console.log("uji")
-        getEventData(props.wallet.dAppclient);
+    const buytick = async ()=>{
+        const useraddr = await props.wallet.dAppclient.getActiveAccount()
+        if(useraddr)
+            buyTicket(props.wallet.dAppclient, useraddr.address);
     }
 
     return (
