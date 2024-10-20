@@ -12,7 +12,7 @@ const Book = (props: Props) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [events, setEvents] = useState<any[]>([]);
   const [hide, setHide] = useState(true);
-  const [kyc, setKyc] = useState("");
+  const [kyc, setKyc] = useState("XXXX-XXXX-XXXX");
   const [ticks, setTicks] = useState(1);
   const [nm, setNm] = useState("");
   const [prc, setPrc] = useState(0);
