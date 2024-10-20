@@ -64,17 +64,16 @@
     font-family: Inter;
 }
 
-.card-venue {
-    font-weight: 900;
-    font-size: 2.25rem;
+.card-venue > p {
+    cursor: pointer;
+    margin: 1rem 0;
     padding: 0 1rem;
-    margin-top: 2rem;
+    font-size: 4rem;
+    text-decoration: underline;
 }
 
-.card-venue > p{
-    border-left: black 2px solid;
-    cursor: pointer;
-    padding-left: 1rem;
+.card-venue > p:hover {
+    color: #ffffff;
 }
 
 .card-sold {
