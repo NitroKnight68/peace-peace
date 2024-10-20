@@ -2,6 +2,7 @@ import { useNavigate } from "react-router";
 import "./Navbar.css";
 import WalletNav from "./wallet";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 interface Props {
   wallet: walletInterfaceProps;
@@ -62,6 +63,10 @@ const Navbar = (props: Props) => {
             }}
           >
             Admin
+          </div>
+          <div>
+            <Link to="https://github.com/NitroKnight68/peace-peace" style={{ color: "black", textDecoration: "none" }}>Github</Link>
+            
           </div>
         </div>
       </div>
