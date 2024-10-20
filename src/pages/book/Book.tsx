@@ -5,7 +5,7 @@ import fetchEvents from "../../helpers/fetchEvents";
 import buyTicket from "../../helpers/contracts/buyTicket";
 
 interface Props {
-    wallet: walletInterfaceProps;
+  wallet: walletInterfaceProps;
 }
 
 const Book = (props: Props) => {
@@ -17,13 +17,13 @@ const Book = (props: Props) => {
   const [nm, setNm] = useState("");
   const [prc, setPrc] = useState(0);
 
-    useEffect(() => {
-        (async () => {
-            const data = await fetchEvents();
-            setEvents(data);
-            console.log(data);
-        })();
-    }, []);
+  useEffect(() => {
+    (async () => {
+      const data = await fetchEvents();
+      setEvents(data);
+      console.log(data);
+    })();
+  }, []);
 
   return (
     <div className="book-div">
@@ -71,7 +71,7 @@ const Book = (props: Props) => {
               <div
                 className="bbb"
                 onClick={async () => {
-                  const rp = await buyTicket(
+                  await buyTicket(
                     props.wallet.dAppclient,
                     nm,
                     ticks,
