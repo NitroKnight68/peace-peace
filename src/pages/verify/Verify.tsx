@@ -3,19 +3,40 @@ import { Navbar, QrReader } from "../../components";
 import fetchnft from "../../helpers/fetch/fetchnft";
 
 import "./Verify.css";
+import toast from "react-hot-toast";
 
 interface Props {
   wallet: walletInterfaceProps;
 }
 
 const Verify = (props: Props) => {
-  const [kyc, setKyc] = useState("jef");
-  const [qrData, setQrdata] = useState("lkefn");
+  const [kyc, setKyc] = useState("");
+  const [qrData, setQrdata] = useState("oobRB5KYgAKCDYgUmBeLkkEmPxjoEsoPdkVxKj2LomWhPxLs1C1");
   const [hide, setHide] = useState(true);
 
   const checkTicket = async () => {
     const tokenData = await fetchnft();
-    console.log("Data: ", tokenData);
+    let vl = tokenData.filter(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (v: any) => {
+        try {
+          const jj = JSON.parse(v["value"]["event_data"]);
+          return jj["trhash"] === qrData;
+        } catch (error) {
+          return false;
+        }
+      }
+    );
+    if (vl.length > 0) {
+      vl = vl[0];
+      if (kyc == vl["value"]["aadhar_number"]) {
+        toast.success("Ticket is Valid");
+      } else {
+        toast.error("Ticket is invalid");
+      }
+    } else {
+      toast.error("Ticket is invalid");
+    }
   };
 
   return (
@@ -35,7 +56,8 @@ const Verify = (props: Props) => {
                 >
                   Scan QR
                 </button>
-                {qrData}
+                <div className="verifyy">{qrData}</div>
+                
               </>
             ) : (
               <QrReader setHide={setHide} setQrdata={setQrdata} />

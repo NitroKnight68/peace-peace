@@ -21,7 +21,6 @@ const Book = (props: Props) => {
     (async () => {
       const data = await fetchEvents();
       setEvents(data);
-      console.log(data);
     })();
   }, []);
 
