@@ -31,7 +31,7 @@ const Book = (props: Props) => {
             <div className="card-img"></div>
             {/* <div className="card-sold">SOLD OUT</div> */}
             <div className="card-h2">{eve["parameter"]["value"]["name"]}</div>
-            <div className="card-date">
+            <div className="card-date" style={{ fontFamily:"sans-serif" }}>
               {eve["parameter"]["value"]["price"]} Tez
             </div>
             <div
