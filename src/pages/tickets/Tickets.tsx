@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "../../components";
-import fetchData from "../../helpers/utils";
 import "./Tickets.css";
 import QRCode from "react-qr-code";
 import fetchtickets from "../../helpers/fetchtickets";

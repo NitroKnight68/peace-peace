@@ -109,4 +109,5 @@
     width: 100%;
     text-align: left;
     border-bottom: black 2px solid;
+    cursor: pointer;
 }
