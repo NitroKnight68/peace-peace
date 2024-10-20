@@ -1,5 +1,4 @@
 import { Navbar } from "../../components";
-import Background from "../../assets/Background.mp4";
 import "./Home.css";
 
 interface Props {

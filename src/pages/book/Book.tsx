@@ -65,7 +65,7 @@ const Book = (props: Props) => {
                 </div>
               </div>
               <div className="bblabel">
-                {ticks} tickets to {nm} at {prc * ticks} Tez{" "}
+                {ticks} tickets to {nm} at {prc * ticks} Mutez{" "}
               </div>
               <div
                 className="bbb"
@@ -102,7 +102,7 @@ const Book = (props: Props) => {
             {/* <div className="card-sold">SOLD OUT</div> */}
             <div className="card-h2">{eve["parameter"]["value"]["name"]}</div>
             <div className="card-date" style={{ fontFamily: "sans-serif" }}>
-              {eve["parameter"]["value"]["price"]} Tez
+              {eve["parameter"]["value"]["price"]} Mutez
             </div>
             <div
               className="card-venue"
