@@ -8,6 +8,8 @@ The hosted frontend can be accessed [here](https://peace-peace.netlify.app).
 
 The project demo and presentation can be found [here](https://drive.google.com/drive/folders/1ULh8vk_IC2vDIFdeQJt-ckhlypsBqIT1).
 
+The smart contracts are on the Tezos Ghostnet at KT1Q8c6ZFoxG8f4cQEHpamirD2SQijXL8pNH and KT1MJEryRHS1vsz9swmP8k6ifU4ZM8Z46PcQ.
+
 ## Getting Started
 - Clone the repo.
 - Install required packages:
